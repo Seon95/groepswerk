@@ -1,0 +1,24 @@
+{
+  "name": "groepswerk1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "deploy": "surge ./dist groepswerkje-store.surge.sh",
+    "clean": "rm -rf ./dist ./node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahBovee/Groepswerk1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoahBovee/Groepswerk1/issues"
+  },
+  "homepage": "https://github.com/NoahBovee/Groepswerk1#readme"
+}
