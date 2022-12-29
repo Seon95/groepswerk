@@ -311,7 +311,7 @@ section{
         <button class="button-value">La Liga</button>
         <button class="button-value">Bundesliga</button>
         <button class="button-value">Serie A</button>
-        <button class="button-value">Ligue 1</button>
+        <button class="button-value"> Ligue 1</button>
       </div>
     </div>
 
