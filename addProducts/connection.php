@@ -32,4 +32,8 @@ $insert = mysqli_query($mysqli,$qry);
         echo "data inserted";
     }
 
+header("Location: ../index.php");
+exit;
 ?>
+
+
