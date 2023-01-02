@@ -2,7 +2,7 @@
   "name": "groepswerk1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "vite.config.js",
   "scripts": {
     "start": "vite --host",
     "build": "vite build",

@@ -29,11 +29,16 @@ figure img {
   height: 500px;
 }
 
+@media (min-width: 700px) {
+  main {
+    padding-top: 100px;
+  }
+}
 main {
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
 }
+
 .container {
   max-width: 1500px;
   margin: 0 auto;
@@ -59,7 +64,7 @@ h2 {
 
   border: 0;
   border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-shadow: rgba(255, 22, 22, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #ffffff;
   display: flex;
@@ -195,3 +200,62 @@ nav div img {
   border-radius: 3em;
 }
 
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  h1 {
+    padding: 30px 0px;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  figure img {
+    height: 250px;
+  }
+  .button-64 {
+    size: 10px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    width: 100vw;
+  }
+
+  nav div img {
+    height: 70px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+}
