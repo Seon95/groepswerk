@@ -5,12 +5,11 @@ $manifest = file_get_contents("./dist/manifest.json");
 //we lezen hem in als associatieve array
 $manifestObject = json_decode($manifest, true);
 ?>
-
 <?php
 $db_host = '127.0.0.1';
 $db_user = 'root';
 $db_password = 'root';
-$db_db = 'winkeltje';
+$db_db = 'winkeltje2';
 $db_port = 8889;
 
 $mysqli = new mysqli(
@@ -68,16 +67,14 @@ $mysqli->close();
   nav {
     display: flex;
     justify-content: space-around;
-    /* background-color: green; */
     align-items: center;
     padding: 10px;
     max-width: 100%;
-    min-width: 1000px;
   }
 
   nav img {
-    height: 100px;
-    width: 150px;
+    min-height: 100px;
+    max-width: 150px;
   }
 
   nav ul {
@@ -85,7 +82,7 @@ $mysqli->close();
     justify-content: flex-end;
     list-style: none;
     gap: 30px;
-    margin-right: 30px;
+
   }
 
   nav ul li {
@@ -107,28 +104,18 @@ $mysqli->close();
     font-family: sans-serif;
     margin-top: 10px;
 
-    /* background: rgb(3, 119, 149);
-  background: linear-gradient(
-    90deg,
-    rgba(3, 119, 149, 1) 0%,
-    rgba(86, 176, 172, 1) 48%,
-    rgb(74, 251, 245) 100%
-  );
-
-  background-position-y: 550px;
-  color: white;
-  font-weight: 400;
-  font-family: sans-serif; */
   }
 
   main {
-    width: 100%;
+    min-width: 100%;
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 0 8%;
+    margin-bottom: 30px;
+
   }
 
   .title {
@@ -141,22 +128,6 @@ $mysqli->close();
     margin: 0 auto;
   }
 
-  .filters-wrapper ul {
-    display: flex;
-    gap: 80px;
-    margin-bottom: 30px;
-    list-style: none;
-  }
-
-  .filters-wrapper ul li:hover {
-    text-decoration: underline;
-  }
-
-  .filters-wrapper ul li {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
 
   .search-container {
     margin: 1em 0;
@@ -197,50 +168,57 @@ $mysqli->close();
   }
 
   /* --------------------- PRODUCTS -------------------- */
-
-  .product-grid {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
+  #grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    row-gap: 30px;
+    column-gap: 30px;
     flex-wrap: wrap;
+    margin-top: 50px;
   }
 
   .product-container {
-    width: 23%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 5rem;
     display: none;
+
   }
+
   .show {
   display: block;
 }
 
+
   .product-img {
-    height: 300px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 10px;
+    transition: all .4s ease;
   }
 
   .product-img img {
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+
   }
 
-  /* .product-img:hover {
-  opacity: 0.6;
-  transform: scale(1.1);
-} */
+  .product-img:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+
+  }
 
   .product-info {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    /* margin-top: 1rem; */
   }
 
   .product-seller {
@@ -263,23 +241,7 @@ $mysqli->close();
 
   /* --------------------- PRODUCTS ANIMATIONS -------------------- */
 
-  .product-img img:hover {
-    width: 100%;
-    height: 100%;
-    animation: rotation 2s infinite linear;
-    /* opacity: 0.6; */
-    transform: scale(1.1);
-  }
 
-  @keyframes rotation {
-    from {
-      transform: rotateY(0deg);
-    }
-
-    to {
-      transform: rotateY(359deg);
-    }
-  }
 
   section {
     display: flex;
@@ -290,12 +252,138 @@ $mysqli->close();
     padding-bottom: 30px;
   }
 
-  nav img {
-    border-radius: 4em;
+
+
+  /* --------------------- Footer -------------------- */
+  footer {
+    position: absolute;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
   }
 
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .footer-content h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+  }
 
+  .footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+  }
+
+  .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+
+  .socials li {
+    margin: 0 10px;
+  }
+
+  .socials a {
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  .socials a i {
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+  }
+
+  .socials a:hover i {
+    color: aqua;
+  }
+
+  .footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+  }
+
+  .footer-menu {
+    float: right;
+  }
+
+  .footer-menu ul {
+    display: flex;
+  }
+
+  .footer-menu ul li {
+    padding-right: 10px;
+    display: block;
+  }
+
+  .footer-menu ul li a {
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+
+  .footer-menu ul li a:hover {
+    color: #27bcda;
+  }
+
+  /* --------------------- MEDIA QUERY -------------------- */
+
+  @media only screen and (max-width: 800px) {
+    .title {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width:500px) {
+    .footer-menu ul {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
 </style>
 
 <!DOCTYPE html>
@@ -305,31 +393,31 @@ $mysqli->close();
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <title>Document</title>
 </head>
 
 <body>
   <nav>
-    <a href="../Homepage/index.html"><img src="/images/logo.png" alt="logo" /></a>
+    <a href="index.php"><img src="/images/logo.png" alt="logo" /></a>
     <ul>
       <li>
-        <a href="../index.html"><i class="bi bi-house-door"></i></a>
+        <a href="index.html"><i class="bi bi-house-door"></i></a>
       </li>
       <li><i class="bi bi-cart3"></i></li>
     </ul>
   </nav>
 
 
-
   <main>
-    <h1 class="title">Football Shirts</h1>
+    <h1 class="title">Shop Products</h1>
     <div class="filters-wrapper">
       <div class="search-container">
         <input type="search" id="search-input" placeholder="Search product name here..." />
         <button id="search">Search</button>
       </div>
-      <div id="filter-buttons">     
+      <div id="filter-buttons">
         <button class="button-value active" onclick="filterSelection('all')"> Show all</button>
         <button class="button-value" onclick="filterSelection('1')">Premier league</button>
         <button class="button-value" onclick="filterSelection('2')">La Liga</button>
@@ -339,19 +427,16 @@ $mysqli->close();
       </div>
     </div>
 
- 
 
-
- 
-
-    <section>
+    <section id="grid">
       <?php
       $counter = 1;
       foreach ($product as $key => $produkt) {
       ?>
 
 
-        <div class="product-container <?= $produkt["category_id"] ?>">
+        
+<div class="product-container <?= $produkt["category_id"] ?>">
           <div class="product-img">
             <img src="/images/<?= $produkt["img"] ?>" alt="Product" />
           </div>
@@ -365,12 +450,43 @@ $mysqli->close();
 
 
 
-
       <?php
         $counter++;
       }
       ?>
 
       <script src="./js/filter.js" defer></script>
-
     </section>
+  </main>
+
+
+  <footer>
+    <div class="footer-content">
+      <h3>Footshirt</h3>
+      <!--add all information -->
+      <p>Footshirts inc.</p>
+    </div>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+
+    <div class="footer-bottom">
+      <!-- add all information -->
+      <p>copyright &copy;2021 <a href="#">Footshirts</a> </p>
+      <div class="footer-menu">
+        <ul class="f-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </footer>
+</body>
