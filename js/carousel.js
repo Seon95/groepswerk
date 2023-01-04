@@ -18,6 +18,7 @@ const moveRight = () => {
     position++;
 }
 
+
 const moveLeft = () => {
     if (position < 1) {
         position = pictures.length - 1;
