@@ -71,16 +71,7 @@
     <br>
     <input type="text" name="category_id" placeholder="Category">
 
-    <!-- <label for="category_id">Choose a pet:</label>
-    <select id="category_id">
-    <option value="">--Please choose an option--</option>
-    <option value="1">Premier League</option>
-    <option value="2">La Liga</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
-</select> -->
+   
 
 
     <br>

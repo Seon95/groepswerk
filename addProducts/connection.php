@@ -1,17 +1,5 @@
 <?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'winkeltje2';
-$db_port = 8888;
-
-$mysqli = new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db,
-  $db_port
-);
+ include '../login/db.php';
 
 $title = $_POST['title'];
 $description = $_POST['description'];
@@ -32,7 +20,7 @@ $insert = mysqli_query($mysqli,$qry);
         echo "data inserted";
     }
 
-header("Location: ../index.php");
+header("Location: ../shop.php");
 exit;
 ?>
 

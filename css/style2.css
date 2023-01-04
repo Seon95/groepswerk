@@ -11,27 +11,28 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  
   align-items: center;
 }
 
-.links {
-  font-size: 30px;
-}
+
 
 .rechts ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   padding-right: 70px;
+  font-size: 17px;
+  
 }
 
 figure img {
-  height: 500px;
+padding-top: 15px ;
+  height: 450px;
 }
 
 @media (min-width: 700px) {
   main {
-    padding-top: 100px;
+    padding-top: 30px;
   }
 }
 main {
@@ -45,19 +46,22 @@ main {
   width: 85%;
 }
 
-section {
-  padding-top: 50px;
-}
+
 
 h1 {
-  padding: 50px 0px;
-  font-size: 35px;
-}
 
-h2 {
   font-size: 20px;
 }
 
+h2 {
+  font-size: 15px;
+  padding: 30px 0px;
+}
+
+aside article figure{
+
+  padding-top: 20px;
+}
 .button-64 {
   align-items: center;
   background-image: linear-gradient(144deg, #4089ff, #5aafe4 50%, #00aceb);
@@ -81,6 +85,10 @@ h2 {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  max-width: 30px;
+  /* position: relative;
+  left: 200px;
+  top: 10px; */
 }
 
 /* CSS */
@@ -137,50 +145,7 @@ h2 {
   }
 }
 
-.center {
-  display: table;
-  width: 100%;
-}
 
-#social-test {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 30px;
-}
-#social-test h2 {
-  color: #fff;
-  font-size: 15px;
-
-  font-weight: 200;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.social {
-  padding-left: 0px;
-}
-footer li {
-  color: rgba(65, 65, 65, 0.836);
-  list-style-type: none;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  padding: 1%;
-  border: 1px solid rgba(65, 65, 65, 0.836);
-  cursor: pointer;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  transition: ease 0.3s;
-}
-
-.social:hover > li {
-  opacity: 0.5;
-}
-
-.social:hover > li:hover {
-  opacity: 1;
-}
 
 hr {
   width: 100%;
@@ -219,9 +184,7 @@ nav div img {
   figure img {
     height: 250px;
   }
-  .button-64 {
-    size: 10px;
-  }
+ 
 
   main {
     display: flex;
@@ -232,15 +195,17 @@ nav div img {
     gap: 30px;
   }
 
-  section{
-
+  section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-
+  
+   
   }
+
+  
   nav {
     display: flex;
     justify-content: space-between;
@@ -259,3 +224,147 @@ nav div img {
     height: 100vh;
   }
 }
+
+/* --------------------- Footer -------------------- */
+footer {
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: 0;
+
+  height: auto;
+  width: 100vw;
+  padding-top: 10px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color .4s ease;
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom p a {
+  color: #44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+.footer-menu {
+  float: right;
+}
+
+.footer-menu ul {
+  display: flex;
+}
+
+.footer-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+
+.footer-menu ul li a {
+  color: #cfd2d6;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  color: #27bcda;
+}
+
+
+@media (max-width: 700px) {
+  footer{
+  display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  aside{
+  display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .button-64{
+  position: static;
+  }
+}
+
+/* aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+

@@ -6,39 +6,11 @@ $manifest = file_get_contents("./dist/manifest.json");
 $manifestObject = json_decode($manifest, true);
 ?>
 <?php
-$db_host = '127.0.0.1';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'winkeltje2';
-$db_port = 8889;
+ 
 
-$mysqli = new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db,
-  $db_port
-);
+ include './login/db.php';
 
-if ($mysqli->connect_error) {
-  echo 'Errno: ' . $mysqli->connect_errno;
-  echo '<br>';
-  echo 'Error: ' . $mysqli->connect_error;
-  exit();
-}
-// if (isset($_GET["completed"])) {
 
-//     $sql = "UPDATE todos set completed_at = NOW() Where id=" . $_GET["completed"];
-//     $mysqli->query($sql);
-//     $result = $mysqli->query($sql);
-// }
-
-// if (isset($_POST["newtask"])) {
-
-//     $sql = "INSERT INTO todos(task) Values( '". $_POST["newtask"] . "')";
-//     $mysqli->query($sql);
-
-// }
 
 $sql = "SELECT id,title,price,img,category_id FROM product";
 $result = $mysqli->query($sql);

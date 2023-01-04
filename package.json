@@ -7,7 +7,7 @@
     "start": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
-    "deploy": "surge ./dist groepswerkje-store.surge.sh",
+    "deploy": "surge ./dist groepswerk-store.surge.sh",
     "clean": "rm -rf ./dist ./node_modules"
   },
   "repository": {
