@@ -61,7 +61,7 @@ $mysqli->close();
 
 
     <main>
-      <h1 class="title">Shop Products</h1>
+      <h1 class="title">Our Products</h1>
       <div class="filters-wrapper">
 
         <div id="filter-buttons">
@@ -113,6 +113,7 @@ $mysqli->close();
 
         <script src="./js/filter.js" defer></script>
       </section>
+   
     </main>
 
 

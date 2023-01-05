@@ -13,13 +13,17 @@ nav {
 
 .rechts ul {
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   gap: 30px;
   padding-right: 70px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .rechts ul li {
   list-style: none;
+  color: #ebcb79;
 }
 
 hr {
@@ -62,8 +66,8 @@ main {
 }
 
 .title {
-  font-size: 90px;
-  margin: 4rem 0 2rem 0;
+  font-size: 70px;
+  margin: 2rem 0 4rem 0;
 }
 
 .filters-wrapper {
@@ -72,17 +76,19 @@ main {
 }
 
 .button-value {
-  border: 2px solid #6759ff;
+  border: 2px solid #ebcb79;
   padding: 1em 2.2em;
   border-radius: 3em;
   background-color: transparent;
-  color: #6759ff;
+  color:#ebcb79;
   cursor: pointer;
 }
 
 .button-value:hover {
-  background: linear-gradient(#6759ff, #110f29);
+  background: linear-gradient(#ebcb79, #f7f3ad);
 }
+
+
 
 /* --------------------- PRODUCTS -------------------- */
 #grid {
@@ -104,6 +110,10 @@ main {
   display: none;
 }
 
+span.product-seller{
+  color:#ebcb79;
+  font-weight: 600;
+}
 .show {
   display: block;
 }
@@ -249,6 +259,13 @@ section {
 
 .filter-buttons {
   padding-bottom: 30px;
+ 
+}
+#filter-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /* --------------------- Footer -------------------- */
