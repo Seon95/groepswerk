@@ -6,9 +6,9 @@ $manifest = file_get_contents("./dist/manifest.json");
 $manifestObject = json_decode($manifest, true);
 ?>
 <?php
- 
 
- include './login/db.php';
+
+include './login/db.php';
 
 
 
@@ -42,91 +42,110 @@ $mysqli->close();
 </head>
 
 <body>
-  <nav>
-    <a href="index.php"><img src="/images/logo.png" alt="logo" /></a>
-    <ul>
-      <li>
-        <a href="index.html"><i class="bi bi-house-door"></i></a>
-      </li>
-      <li><i class="bi bi-cart3"></i></li>
-    </ul>
-  </nav>
-
-
-  <main>
-    <h1 class="title">Shop Products</h1>
-    <div class="filters-wrapper">
-      
-      <div id="filter-buttons">
-        <button class="button-value active" onclick="filterSelection('all')"> Show all</button>
-        <button class="button-value" onclick="filterSelection('1')">Premier league</button>
-        <button class="button-value" onclick="filterSelection('2')">La Liga</button>
-        <button class="button-value" onclick="filterSelection('3')">Bundesliga</button>
-        <button class="button-value" onclick="filterSelection('4')">Serie A</button>
-        <button class="button-value" onclick="filterSelection('5')"> Ligue 1</button>
+  <div class="container">
+    <nav>
+      <div class="links">
+        <img class="logoo" src="/images/futshirt_logo_gimp.png" alt="logo" />
       </div>
-    </div>
 
-
-    <section id="grid">
-      <?php
-      $counter = 1;
-      foreach ($product as $key => $produkt) {
-      ?>
-
-
-        
-<div class="product-container <?= $produkt["category_id"] ?>">
-          <div class="product-img">
-            <img src="/images/<?= $produkt["img"] ?>" alt="Product" />
-          </div>
-          <div class="product-info">
-            <span class="product-seller">FUTSHIRT</span>
-            <h3 class="product-title"><?= $produkt["title"] ?> </h3>
-            <!-- <h3 class="product-description"><?= $produkt["description"] ?></h3> -->
-            <h3 class="product-price"><?= $produkt["price"] ?></h3>
-          </div>
-        </div>
-
-
-
-      <?php
-        $counter++;
-      }
-      ?>
-
-      <script src="./js/filter.js" defer></script>
-    </section>
-  </main>
-
-
-  <footer>
-    <div class="footer-content">
-      <h3>Footshirt</h3>
-      <!--add all information -->
-      <p>Footshirts inc.</p>
-    </div>
-    <ul class="socials">
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-    </ul>
-
-    <div class="footer-bottom">
-      <!-- add all information -->
-      <p>copyright &copy;2021 <a href="#">Footshirts</a> </p>
-      <div class="footer-menu">
-        <ul class="f-menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Blog</a></li>
+      <div class="rechts">
+        <ul>
+          <li>
+            <a href="index.html"><i class="bi bi-house-door"></i></a>
+          </li>
+          <li><i class="bi bi-cart3"></i></li>
         </ul>
       </div>
-    </div>
+    </nav>
+    <hr />
 
 
-  </footer>
+    <main>
+      <h1 class="title">Shop Products</h1>
+      <div class="filters-wrapper">
+
+        <div id="filter-buttons">
+          <button class="button-value active" onclick="filterSelection('all')"> Show all</button>
+          <button class="button-value" onclick="filterSelection('1')">Premier league</button>
+          <button class="button-value" onclick="filterSelection('2')">La Liga</button>
+          <button class="button-value" onclick="filterSelection('3')">Bundesliga</button>
+          <button class="button-value" onclick="filterSelection('4')">Serie A</button>
+          <button class="button-value" onclick="filterSelection('5')"> Ligue 1</button>
+        </div>
+      </div>
+
+
+      <section id="grid">
+        <?php
+        $counter = 1;
+        foreach ($product as $key => $produkt) {
+        ?>
+
+
+
+          <div class="product-container <?= $produkt["category_id"] ?>">
+            <div class="product-img">
+              <img id="P-img" src="/images/<?= $produkt["img"] ?>" alt="Product" />
+            </div>
+            <div class="product-info">
+              <span class="product-seller">FUTSHIRT</span>
+              <h3 class="product-title"><?= $produkt["title"] ?> </h3>
+              <!-- <h3 class="product-description"><?= $produkt["description"] ?></h3> -->
+              <h3 class="product-price"><?= $produkt["price"] ?></h3>
+            </div>
+          </div>
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+
+
+        <?php
+          $counter++;
+        }
+        ?>
+
+        <script src="./js/filter.js" defer></script>
+      </section>
+    </main>
+
+
+    <footer>
+      <div class="footer-content">
+        <h3>Footshirt</h3>
+        <!--add all information -->
+        <p>Footshirts inc.</p>
+      </div>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <!-- add all information -->
+        <p>copyright &copy;2021 <a href="#">Footshirts</a> </p>
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </footer>
+    <script src="./js/modalImg.js"></script>
+  </div>
+
 </body>
