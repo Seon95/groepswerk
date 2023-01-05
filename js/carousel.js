@@ -3,7 +3,7 @@ const rightBtn = document.getElementById('right-btn');
 const leftBtn = document.getElementById('left-btn');
 
 // Images are from unsplash
-let pictures = ["/images/product_example.jpg","/images/product_example2.jpg","/images/product_example_chelsea.jpg"];
+let pictures = ["/images/product_example_copia.jpg","/images/product_example_copia3.jpg","/images/product_example_copia2.jpg"];
 
 img.src = pictures[0];
 let position = 0;
