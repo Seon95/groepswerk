@@ -77,7 +77,7 @@
     <br>
     <input type="text" name="img" placeholder="Img">
 
-    <button type="submit" name="submit"> Sign up</button>
+    <button type="submit" name="submit"> Toevoegen</button>
 
 
   </form>

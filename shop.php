@@ -81,7 +81,7 @@ $mysqli->close();
             <img src="/images/<?= $produkt["img"] ?>" alt="Product" />
           </div>
           <div class="product-info">
-            <span class="product-seller">Our Shop Name</span>
+            <span class="product-seller">FUTSHIRT</span>
             <h3 class="product-title"><?= $produkt["title"] ?> </h3>
             <!-- <h3 class="product-description"><?= $produkt["description"] ?></h3> -->
             <h3 class="product-price"><?= $produkt["price"] ?></h3>
