@@ -25,6 +25,9 @@ nav {
   list-style: none;
   color: #ebcb79;
 }
+.rechts ul li:hover {
+  color: white;
+}
 
 hr {
   max-width: 100%;
@@ -49,9 +52,9 @@ body {
 }
 
 .container {
-  max-width: 1500px;
+  /* max-width: 1500px; */
   margin: 0 auto;
-  width: 85%;
+  max-width: 85%;
 }
 
 main {
@@ -71,24 +74,27 @@ main {
 }
 
 .filters-wrapper {
-  width: 95%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
+#filter-buttons {
+  /* max-width: 676px; */
+  display: flex;
+  flex-wrap: wrap;
+}
 .button-value {
   border: 2px solid #ebcb79;
   padding: 1em 2.2em;
   border-radius: 3em;
   background-color: transparent;
-  color:#ebcb79;
+  color: #ebcb79;
   cursor: pointer;
 }
 
 .button-value:hover {
   background: linear-gradient(#ebcb79, #f7f3ad);
 }
-
-
 
 /* --------------------- PRODUCTS -------------------- */
 #grid {
@@ -97,7 +103,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   row-gap: 50px;
   column-gap: 30px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-top: 50px;
 }
 
@@ -110,8 +116,8 @@ main {
   display: none;
 }
 
-span.product-seller{
-  color:#ebcb79;
+span.product-seller {
+  color: #ebcb79;
   font-weight: 600;
 }
 .show {
@@ -259,9 +265,8 @@ section {
 
 .filter-buttons {
   padding-bottom: 30px;
- 
 }
-#filter-buttons{
+#filter-buttons {
   display: flex;
   justify-content: center;
   align-items: center;

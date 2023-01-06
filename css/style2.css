@@ -11,22 +11,19 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  
+
   align-items: center;
 }
-
-
 
 .rechts ul {
   display: flex;
   gap: 30px;
   padding-right: 70px;
   font-size: 17px;
-  
 }
 
 figure img {
-padding-top: 15px ;
+  padding-top: 15px;
   height: 450px;
 }
 
@@ -46,10 +43,7 @@ main {
   width: 85%;
 }
 
-
-
 h1 {
-
   font-size: 20px;
 }
 
@@ -57,13 +51,12 @@ h2 {
   font-size: 15px;
   padding: 30px 0px;
 }
-h3{
+h3 {
   color: #ebcb79;
   font-weight: 500;
 }
 
-aside article figure{
-
+aside article figure {
   padding-top: 20px;
 }
 .button-64 {
@@ -149,8 +142,6 @@ aside article figure{
   }
 }
 
-
-
 hr {
   width: 100%;
   height: 1px;
@@ -188,7 +179,6 @@ nav div img {
   figure img {
     height: 250px;
   }
- 
 
   main {
     display: flex;
@@ -205,11 +195,8 @@ nav div img {
     justify-content: center;
     align-items: center;
     align-content: center;
-  
-   
   }
 
-  
   nav {
     display: flex;
     justify-content: space-between;
@@ -235,7 +222,6 @@ footer {
   bottom: auto;
   left: 0;
   right: 0;
-
   height: auto;
   width: 100vw;
   padding-top: 10px;
@@ -288,7 +274,7 @@ footer {
 .socials a i {
   font-size: 1.1rem;
   width: 20px;
-  transition: color .4s ease;
+  transition: color 0.4s ease;
 }
 
 .socials a:hover i {
@@ -318,7 +304,7 @@ footer {
 
 .footer-bottom span {
   text-transform: uppercase;
-  opacity: .4;
+  opacity: 0.4;
   font-weight: 200;
 }
 
@@ -344,34 +330,33 @@ footer {
   color: #27bcda;
 }
 
-
 @media (max-width: 700px) {
-  footer{
-  display: none;
+  footer {
+    display: none;
   }
 }
 
 @media (max-width: 700px) {
-  aside{
-  display: none;
+  aside {
+    display: none;
   }
 }
 
 @media (max-width: 700px) {
-  .button-64{
-  position: static;
+  .button-64 {
+    position: static;
   }
 }
 
-a{
+a {
   color: #ebcb79;
 }
 
-#right-btn,#left-btn{
+#right-btn,
+#left-btn {
   background-color: #ebcb79;
 }
 
-
-aside h3{
+aside h3 {
   padding-bottom: 10px;
 }

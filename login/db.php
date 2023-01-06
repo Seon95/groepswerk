@@ -2,8 +2,8 @@
 $db_host = 'localhost';
 $db_user = 'root';
 $db_password = 'root';
-$db_db = 'winkeltje2';
-$db_port = 8888;
+$db_db = 'winkeltje';
+$db_port = 8889;
 
 $mysqli = new mysqli(
   $db_host,
