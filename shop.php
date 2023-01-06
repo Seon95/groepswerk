@@ -113,15 +113,15 @@ $mysqli->close();
 
         <script src="./js/filter.js" defer></script>
       </section>
-   
+
     </main>
 
 
     <footer>
       <div class="footer-content">
-        <h3>Footshirt</h3>
+        <h3>Futshirt</h3>
         <!--add all information -->
-        <p>Footshirts inc.</p>
+        <p>Futshirt inc.</p>
       </div>
       <ul class="socials">
         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -133,7 +133,7 @@ $mysqli->close();
 
       <div class="footer-bottom">
         <!-- add all information -->
-        <p>copyright &copy;2021 <a href="#">Footshirts</a> </p>
+        <p>copyright &copy;2021 <a href="#">Futshirt</a> </p>
         <div class="footer-menu">
           <ul class="f-menu">
             <li><a href="./index.html">Home</a></li>
