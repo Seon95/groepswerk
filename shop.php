@@ -91,7 +91,7 @@ $mysqli->close();
               <span class="product-seller">FUTSHIRT</span>
               <h3 class="product-title"><?= $produkt["title"] ?> </h3>
               <!-- <h3 class="product-description"><?= $produkt["description"] ?></h3> -->
-              <h3 class="product-price"><?= $produkt["price"] ?></h3>
+              <h3 class="product-price"><?= $produkt["price"] ?>€</h3>
             </div>
           </div>
           <div id="myModal" class="modal">
