@@ -94,12 +94,14 @@ $mysqli->close();
               <h3 class="product-price"><?= $produkt["price"] ?></h3>
             </div>
           </div>
+
+
           <div id="myModal" class="modal">
             <!-- The Close Button -->
             <span class="close">&times;</span>
 
             <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
+            <img class="modal-content" id="img">
 
             <!-- Modal Caption (Image Text) -->
             <div id="caption"></div>
