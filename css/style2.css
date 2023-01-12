@@ -40,17 +40,21 @@ nav ul li a:after {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: #ebcb79;
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.5s ease-out;
 }
 
 nav ul li a:hover:after {
   transform: scaleX(1);
   transform-origin: bottom;
+}
+
+nav ul li a:hover {
+  animation: animate2 1s ease-in-out infinite alternate;
 }
 
 /**/
@@ -424,7 +428,8 @@ h2 {
   font-size: 20px;
   font-weight: 800;
   margin-left: 50%;
-  animation: animate 1s ease-in-out infinite alternate;
+  color: #ebcb79;
+  animation: animate2 1s ease-in-out infinite alternate;
 
   /* margin-top: 100px; */
 }
@@ -445,5 +450,13 @@ h2 {
   }
   to {
     text-shadow: 0 0 20px white, 0 0 10px 0 0 20px white;
+  }
+}
+@keyframes animate2 {
+  from {
+    text-shadow: 0 0 10px #ebcb79;
+  }
+  to {
+    text-shadow: 0 0 20px #ebcb79, 0 0 10px 0 0 20px #ebcb79;
   }
 }
