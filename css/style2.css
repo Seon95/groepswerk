@@ -199,7 +199,7 @@ nav div img {
   border-radius: 3em;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   body {
     display: flex;
     flex-wrap: wrap;
@@ -254,7 +254,7 @@ nav div img {
     justify-content: space-around;
     height: 100vh;
   }
-}
+} */
 
 /* --------------------- Footer -------------------- */
 footer {
@@ -372,7 +372,7 @@ footer {
   color: #27bcda;
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   footer {
     display: none;
   }
@@ -388,7 +388,7 @@ footer {
   .button-64 {
     position: static;
   }
-}
+} */
 
 a {
   color: #ebcb79;
@@ -407,14 +407,6 @@ img#cristiano {
   padding-top: 100px;
   position: relative;
 }
-.carousel-container {
-  margin-top: 200px;
-}
-.carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
 main h1 {
   font-size: 90px;
@@ -432,6 +424,15 @@ h2 {
   animation: animate2 1s ease-in-out infinite alternate;
 
   /* margin-top: 100px; */
+}
+
+.carousel-container {
+  margin-top: 200px;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-logo {
@@ -458,5 +459,33 @@ h2 {
   }
   to {
     text-shadow: 0 0 20px #ebcb79, 0 0 10px 0 0 20px #ebcb79;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main h1 {
+    text-align: center;
+    font-size: 80px;
+  }
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .carousel,
+  h2 {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main h1 {
+    text-align: center;
+    font-size: 60px;
   }
 }
