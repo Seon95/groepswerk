@@ -16,13 +16,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .rechts ul {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   padding-right: 70px;
   font-size: 17px;
+  font-weight: 600;
 }
 
 .rechts,
@@ -469,5 +471,16 @@ h3 {
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .links {
+    display: block;
+    margin: auto;
+    /* align-items: center; */
+  }
+  .rechts {
+    display: block;
+    margin: auto;
   }
 }

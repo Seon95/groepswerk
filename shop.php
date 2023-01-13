@@ -45,7 +45,7 @@ $mysqli->close();
   <div class="container">
     <nav>
       <div class="links">
-        <img class="logoo" src="/images/futshirt_logo_gimp.png" alt="logo" />
+        <a href="./index.html"><img class="logoo" src="/images/futshirt_logo_gimp.png" alt="logo" /></a>
       </div>
 
       <div class="rechts">
